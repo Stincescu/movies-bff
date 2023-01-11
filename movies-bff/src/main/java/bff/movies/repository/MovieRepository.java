@@ -1,13 +1,11 @@
-package bff.movies.service;
+package bff.movies.repository;
 
 import bff.movies.dto.MovieDTO;
-import bff.movies.model.Movie;
 
 import java.util.List;
 
-public interface MovieService {
-
-    List<MovieDTO> getAll();
+public interface MovieRepository {
+    List<MovieDTO> getAlL();
 
     MovieDTO getById(String id);
 
@@ -17,5 +15,5 @@ public interface MovieService {
 
     void update(String movieId, MovieDTO movieDTO);
 
-    List<MovieDTO> search(String startsWith);
+    List<MovieDTO> findAllByNameStartingWith(String startsWith);
 }
