@@ -47,9 +47,9 @@ public class MovieProvider {
     }
 
     public static void delete(String movieId) {
+
         movies.remove(movieId);
     }
-
     public static void update(String movieId, MovieDTO movieDTO) {
         movieDTO.setId(movieId);
         movies.put(movieId, movieDTO);

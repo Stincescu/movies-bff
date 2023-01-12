@@ -11,11 +11,11 @@ import java.util.List;
 @Service
 public class MovieServiceImpl implements MovieService {
 
+    //TODO: Add business logic + checks + logs to all methods
     @Resource
     private MovieRepository movieRepository;
     @Override
     public List<MovieDTO> getAll() {
-        //TODO: Add business logic to all methods from here
         return movieRepository.getAlL();
     }
 
@@ -42,6 +42,5 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<MovieDTO> search(String startsWith) {
         return movieRepository.findAllByNameStartingWith(startsWith);
-
     }
 }
