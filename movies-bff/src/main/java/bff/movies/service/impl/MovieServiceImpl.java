@@ -3,14 +3,15 @@ package bff.movies.service.impl;
 import bff.movies.dto.MovieDTO;
 import bff.movies.repository.MovieRepository;
 import bff.movies.service.MovieService;
-import com.sun.xml.bind.v2.TODO;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class MovieServiceImpl implements MovieService {
 
+    @Resource
     private MovieRepository movieRepository;
     @Override
     public List<MovieDTO> getAll() {

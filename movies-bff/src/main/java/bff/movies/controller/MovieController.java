@@ -5,6 +5,7 @@ import bff.movies.service.MovieService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1/movies")
 public class MovieController {
 
+    @Resource
     private MovieService movieService;
 
     @GetMapping
